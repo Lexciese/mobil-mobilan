@@ -1,0 +1,4 @@
+<launch>
+    <include file="$(find shell_simulation)/launch/pc_to_l.launch"/>
+    <node pkg="shell_simulation" name="shell_simulation_node" type="controller.py"/>
+</launch>
