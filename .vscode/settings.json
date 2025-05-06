@@ -1,0 +1,10 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/lexciese/Dev/projects/sem-apc/devel/lib/python3/dist-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/lexciese/Dev/projects/sem-apc/devel/lib/python3/dist-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ]
+}

@@ -1,0 +1,30 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/opt/ros/jazzy/include/**",
+        "/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/pointcloud_to_laserscan-lunar-devel/include/**",
+        "/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2/include/**",
+        "/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_bullet/include/**",
+        "/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_eigen/include/**",
+        "/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_geometry_msgs/include/**",
+        "/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_kdl/include/**",
+        "/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_msgs/include/**",
+        "/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_ros/include/**",
+        "/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_sensor_msgs/include/**",
+        "/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/pcl_recorder/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

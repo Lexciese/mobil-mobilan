@@ -1,0 +1,885 @@
+[0.111s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'list', '-p', '--base-paths', '/home/lexciese/Dev/projects/sem-apc']
+[0.111s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='list', build_base='build', ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['/home/lexciese/Dev/projects/sem-apc'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], topological_order=False, names_only=False, paths_only=True, topological_graph=False, topological_graph_dot=False, topological_graph_density=False, topological_graph_legend=False, topological_graph_dot_cluster=False, topological_graph_dot_include_skipped=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x796e366758b0>, verb_extension=<colcon_package_information.verb.list.ListVerb object at 0x796e36620a10>, main=<bound method ListVerb.main of <colcon_package_information.verb.list.ListVerb object at 0x796e36620a10>>, mixin_verb=('list',))
+[0.158s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.158s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.158s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.158s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.158s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.158s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/lexciese/Dev/projects/sem-apc'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc) by extensions ['ignore', 'ignore_ament_install']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc) by extension 'ignore'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc) by extension 'ignore_ament_install'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc) by extensions ['colcon_pkg']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc) by extension 'colcon_pkg'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc) by extensions ['colcon_meta']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc) by extension 'colcon_meta'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc) by extensions ['ros']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc) by extension 'ros'
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc) by extensions ['cmake', 'python']
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc) by extension 'cmake'
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc) by extension 'python'
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc) by extensions ['python_setup_py']
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc) by extension 'python_setup_py'
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/build) by extensions ['ignore', 'ignore_ament_install']
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/build) by extension 'ignore'
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/build) by extension 'ignore_ament_install'
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/build) by extensions ['colcon_pkg']
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/build) by extension 'colcon_pkg'
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/build) by extensions ['colcon_meta']
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/build) by extension 'colcon_meta'
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/build) by extensions ['ros']
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/build) by extension 'ros'
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/build) ignored
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/devel) by extensions ['ignore', 'ignore_ament_install']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/devel) by extension 'ignore'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/devel) by extension 'ignore_ament_install'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/devel) ignored
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/log) by extensions ['ignore', 'ignore_ament_install']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/log) by extension 'ignore'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/log) ignored
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src) by extensions ['ignore', 'ignore_ament_install']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src) by extension 'ignore'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src) by extension 'ignore_ament_install'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src) by extensions ['colcon_pkg']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src) by extension 'colcon_pkg'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src) by extensions ['colcon_meta']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src) by extension 'colcon_meta'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src) by extensions ['ros']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src) by extension 'ros'
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src) by extensions ['cmake', 'python']
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src) by extension 'cmake'
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src) by extension 'python'
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src) by extensions ['python_setup_py']
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src) by extension 'python_setup_py'
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto) by extensions ['ignore', 'ignore_ament_install']
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto) by extension 'ignore'
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto) by extension 'ignore_ament_install'
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto) by extensions ['colcon_pkg']
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto) by extension 'colcon_pkg'
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto) by extensions ['colcon_meta']
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto) by extension 'colcon_meta'
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto) by extensions ['ros']
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto) by extension 'ros'
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto) by extensions ['cmake', 'python']
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto) by extension 'cmake'
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto) by extension 'python'
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto) by extensions ['python_setup_py']
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto) by extension 'python_setup_py'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/geometry2) by extensions ['ignore', 'ignore_ament_install']
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/geometry2) by extension 'ignore'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/geometry2) by extension 'ignore_ament_install'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/geometry2) by extensions ['colcon_pkg']
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/geometry2) by extension 'colcon_pkg'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/geometry2) by extensions ['colcon_meta']
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/geometry2) by extension 'colcon_meta'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/geometry2) by extensions ['ros']
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/geometry2) by extension 'ros'
+[0.207s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/geometry2' with type 'ros.catkin' and name 'geometry2'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/point_cloud_converter-hydro-devel) by extensions ['ignore', 'ignore_ament_install']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/point_cloud_converter-hydro-devel) by extension 'ignore'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/point_cloud_converter-hydro-devel) by extension 'ignore_ament_install'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/point_cloud_converter-hydro-devel) by extensions ['colcon_pkg']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/point_cloud_converter-hydro-devel) by extension 'colcon_pkg'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/point_cloud_converter-hydro-devel) by extensions ['colcon_meta']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/point_cloud_converter-hydro-devel) by extension 'colcon_meta'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/point_cloud_converter-hydro-devel) by extensions ['ros']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/point_cloud_converter-hydro-devel) by extension 'ros'
+[0.208s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/point_cloud_converter-hydro-devel' with type 'ros.catkin' and name 'point_cloud_converter'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/pointcloud_to_laserscan-lunar-devel) by extensions ['ignore', 'ignore_ament_install']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/pointcloud_to_laserscan-lunar-devel) by extension 'ignore'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/pointcloud_to_laserscan-lunar-devel) by extension 'ignore_ament_install'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/pointcloud_to_laserscan-lunar-devel) by extensions ['colcon_pkg']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/pointcloud_to_laserscan-lunar-devel) by extension 'colcon_pkg'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/pointcloud_to_laserscan-lunar-devel) by extensions ['colcon_meta']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/pointcloud_to_laserscan-lunar-devel) by extension 'colcon_meta'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/pointcloud_to_laserscan-lunar-devel) by extensions ['ros']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/pointcloud_to_laserscan-lunar-devel) by extension 'ros'
+[0.210s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/pointcloud_to_laserscan-lunar-devel' with type 'ros.catkin' and name 'pointcloud_to_laserscan'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/shell_simulation) by extensions ['ignore', 'ignore_ament_install']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/shell_simulation) by extension 'ignore'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/shell_simulation) by extension 'ignore_ament_install'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/shell_simulation) by extensions ['colcon_pkg']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/shell_simulation) by extension 'colcon_pkg'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/shell_simulation) by extensions ['colcon_meta']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/shell_simulation) by extension 'colcon_meta'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/shell_simulation) by extensions ['ros']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/shell_simulation) by extension 'ros'
+[0.212s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/shell_simulation' with type 'ros.catkin' and name 'shell_simulation'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/test_tf2) by extensions ['ignore', 'ignore_ament_install']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/test_tf2) by extension 'ignore'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/test_tf2) by extension 'ignore_ament_install'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/test_tf2) by extensions ['colcon_pkg']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/test_tf2) by extension 'colcon_pkg'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/test_tf2) by extensions ['colcon_meta']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/test_tf2) by extension 'colcon_meta'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/test_tf2) by extensions ['ros']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/test_tf2) by extension 'ros'
+[0.213s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/test_tf2' with type 'ros.catkin' and name 'test_tf2'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2) by extensions ['ignore', 'ignore_ament_install']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2) by extension 'ignore'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2) by extension 'ignore_ament_install'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2) by extensions ['colcon_pkg']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2) by extension 'colcon_pkg'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2) by extensions ['colcon_meta']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2) by extension 'colcon_meta'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2) by extensions ['ros']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2) by extension 'ros'
+[0.215s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2' with type 'ros.catkin' and name 'tf2'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_bullet) by extensions ['ignore', 'ignore_ament_install']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_bullet) by extension 'ignore'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_bullet) by extension 'ignore_ament_install'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_bullet) by extensions ['colcon_pkg']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_bullet) by extension 'colcon_pkg'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_bullet) by extensions ['colcon_meta']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_bullet) by extension 'colcon_meta'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_bullet) by extensions ['ros']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_bullet) by extension 'ros'
+[0.216s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_bullet' with type 'ros.catkin' and name 'tf2_bullet'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_eigen) by extensions ['ignore', 'ignore_ament_install']
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_eigen) by extension 'ignore'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_eigen) by extension 'ignore_ament_install'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_eigen) by extensions ['colcon_pkg']
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_eigen) by extension 'colcon_pkg'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_eigen) by extensions ['colcon_meta']
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_eigen) by extension 'colcon_meta'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_eigen) by extensions ['ros']
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_eigen) by extension 'ros'
+[0.217s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_eigen' with type 'ros.catkin' and name 'tf2_eigen'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_geometry_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_geometry_msgs) by extension 'ignore'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_geometry_msgs) by extension 'ignore_ament_install'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_geometry_msgs) by extensions ['colcon_pkg']
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_geometry_msgs) by extension 'colcon_pkg'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_geometry_msgs) by extensions ['colcon_meta']
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_geometry_msgs) by extension 'colcon_meta'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_geometry_msgs) by extensions ['ros']
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_geometry_msgs) by extension 'ros'
+[0.218s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_geometry_msgs' with type 'ros.catkin' and name 'tf2_geometry_msgs'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_kdl) by extensions ['ignore', 'ignore_ament_install']
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_kdl) by extension 'ignore'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_kdl) by extension 'ignore_ament_install'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_kdl) by extensions ['colcon_pkg']
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_kdl) by extension 'colcon_pkg'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_kdl) by extensions ['colcon_meta']
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_kdl) by extension 'colcon_meta'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_kdl) by extensions ['ros']
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_kdl) by extension 'ros'
+[0.219s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_kdl' with type 'ros.catkin' and name 'tf2_kdl'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_msgs) by extension 'ignore'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_msgs) by extension 'ignore_ament_install'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_msgs) by extensions ['colcon_pkg']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_msgs) by extension 'colcon_pkg'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_msgs) by extensions ['colcon_meta']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_msgs) by extension 'colcon_meta'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_msgs) by extensions ['ros']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_msgs) by extension 'ros'
+[0.220s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_msgs' with type 'ros.catkin' and name 'tf2_msgs'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_py) by extensions ['ignore', 'ignore_ament_install']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_py) by extension 'ignore'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_py) by extension 'ignore_ament_install'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_py) by extensions ['colcon_pkg']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_py) by extension 'colcon_pkg'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_py) by extensions ['colcon_meta']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_py) by extension 'colcon_meta'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_py) by extensions ['ros']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_py) by extension 'ros'
+[0.221s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_py' with type 'ros.catkin' and name 'tf2_py'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_ros) by extensions ['ignore', 'ignore_ament_install']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_ros) by extension 'ignore'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_ros) by extension 'ignore_ament_install'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_ros) by extensions ['colcon_pkg']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_ros) by extension 'colcon_pkg'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_ros) by extensions ['colcon_meta']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_ros) by extension 'colcon_meta'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_ros) by extensions ['ros']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_ros) by extension 'ros'
+[0.222s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_ros' with type 'ros.catkin' and name 'tf2_ros'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_sensor_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_sensor_msgs) by extension 'ignore'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_sensor_msgs) by extension 'ignore_ament_install'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_sensor_msgs) by extensions ['colcon_pkg']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_sensor_msgs) by extension 'colcon_pkg'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_sensor_msgs) by extensions ['colcon_meta']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_sensor_msgs) by extension 'colcon_meta'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_sensor_msgs) by extensions ['ros']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_sensor_msgs) by extension 'ros'
+[0.223s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_sensor_msgs' with type 'ros.catkin' and name 'tf2_sensor_msgs'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_tools) by extensions ['ignore', 'ignore_ament_install']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_tools) by extension 'ignore'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_tools) by extension 'ignore_ament_install'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_tools) by extensions ['colcon_pkg']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_tools) by extension 'colcon_pkg'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_tools) by extensions ['colcon_meta']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_tools) by extension 'colcon_meta'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_tools) by extensions ['ros']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_tools) by extension 'ros'
+[0.224s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/Controller Proto/tf2_tools' with type 'ros.catkin' and name 'tf2_tools'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book) by extensions ['ignore', 'ignore_ament_install']
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book) by extension 'ignore'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book) by extension 'ignore_ament_install'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book) by extensions ['colcon_pkg']
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book) by extension 'colcon_pkg'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book) by extensions ['colcon_meta']
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book) by extension 'colcon_meta'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book) by extensions ['ros']
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book) by extension 'ros'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book) by extensions ['cmake', 'python']
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book) by extension 'cmake'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book) by extension 'python'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book) by extensions ['python_setup_py']
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book) by extension 'python_setup_py'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/_out) by extensions ['ignore', 'ignore_ament_install']
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/_out) by extension 'ignore'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/_out) by extension 'ignore_ament_install'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/_out) by extensions ['colcon_pkg']
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/_out) by extension 'colcon_pkg'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/_out) by extensions ['colcon_meta']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/_out) by extension 'colcon_meta'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/_out) by extensions ['ros']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/_out) by extension 'ros'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/_out) by extensions ['cmake', 'python']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/_out) by extension 'cmake'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/_out) by extension 'python'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/_out) by extensions ['python_setup_py']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/_out) by extension 'python_setup_py'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents) by extensions ['ignore', 'ignore_ament_install']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents) by extension 'ignore'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents) by extension 'ignore_ament_install'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents) by extensions ['colcon_pkg']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents) by extension 'colcon_pkg'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents) by extensions ['colcon_meta']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents) by extension 'colcon_meta'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents) by extensions ['ros']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents) by extension 'ros'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents) by extensions ['cmake', 'python']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents) by extension 'cmake'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents) by extension 'python'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents) by extensions ['python_setup_py']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents) by extension 'python_setup_py'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents/navigation) by extensions ['ignore', 'ignore_ament_install']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents/navigation) by extension 'ignore'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents/navigation) by extension 'ignore_ament_install'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents/navigation) by extensions ['colcon_pkg']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents/navigation) by extension 'colcon_pkg'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents/navigation) by extensions ['colcon_meta']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents/navigation) by extension 'colcon_meta'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents/navigation) by extensions ['ros']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents/navigation) by extension 'ros'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents/navigation) by extensions ['cmake', 'python']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents/navigation) by extension 'cmake'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents/navigation) by extension 'python'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents/navigation) by extensions ['python_setup_py']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents/navigation) by extension 'python_setup_py'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents/tools) by extensions ['ignore', 'ignore_ament_install']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents/tools) by extension 'ignore'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents/tools) by extension 'ignore_ament_install'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents/tools) by extensions ['colcon_pkg']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents/tools) by extension 'colcon_pkg'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents/tools) by extensions ['colcon_meta']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents/tools) by extension 'colcon_meta'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents/tools) by extensions ['ros']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents/tools) by extension 'ros'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents/tools) by extensions ['cmake', 'python']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents/tools) by extension 'cmake'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents/tools) by extension 'python'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents/tools) by extensions ['python_setup_py']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/agents/tools) by extension 'python_setup_py'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book) by extensions ['ignore', 'ignore_ament_install']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book) by extension 'ignore'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book) by extension 'ignore_ament_install'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book) by extensions ['colcon_pkg']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book) by extension 'colcon_pkg'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book) by extensions ['colcon_meta']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book) by extension 'colcon_meta'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book) by extensions ['ros']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book) by extension 'ros'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book) by extensions ['cmake', 'python']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book) by extension 'cmake'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book) by extension 'python'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book) by extensions ['python_setup_py']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book) by extension 'python_setup_py'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/1-introduction) by extensions ['ignore', 'ignore_ament_install']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/1-introduction) by extension 'ignore'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/1-introduction) by extension 'ignore_ament_install'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/1-introduction) by extensions ['colcon_pkg']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/1-introduction) by extension 'colcon_pkg'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/1-introduction) by extensions ['colcon_meta']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/1-introduction) by extension 'colcon_meta'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/1-introduction) by extensions ['ros']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/1-introduction) by extension 'ros'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/1-introduction) by extensions ['cmake', 'python']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/1-introduction) by extension 'cmake'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/1-introduction) by extension 'python'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/1-introduction) by extensions ['python_setup_py']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/1-introduction) by extension 'python_setup_py'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/2-vehicle-dynamics) by extensions ['ignore', 'ignore_ament_install']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/2-vehicle-dynamics) by extension 'ignore'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/2-vehicle-dynamics) by extension 'ignore_ament_install'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/2-vehicle-dynamics) by extensions ['colcon_pkg']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/2-vehicle-dynamics) by extension 'colcon_pkg'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/2-vehicle-dynamics) by extensions ['colcon_meta']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/2-vehicle-dynamics) by extension 'colcon_meta'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/2-vehicle-dynamics) by extensions ['ros']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/2-vehicle-dynamics) by extension 'ros'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/2-vehicle-dynamics) by extensions ['cmake', 'python']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/2-vehicle-dynamics) by extension 'cmake'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/2-vehicle-dynamics) by extension 'python'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/2-vehicle-dynamics) by extensions ['python_setup_py']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/2-vehicle-dynamics) by extension 'python_setup_py'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking) by extensions ['ignore', 'ignore_ament_install']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking) by extension 'ignore'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking) by extension 'ignore_ament_install'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking) by extensions ['colcon_pkg']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking) by extension 'colcon_pkg'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking) by extensions ['colcon_meta']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking) by extension 'colcon_meta'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking) by extensions ['ros']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking) by extension 'ros'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking) by extensions ['cmake', 'python']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking) by extension 'cmake'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking) by extension 'python'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking) by extensions ['python_setup_py']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking) by extension 'python_setup_py'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/_out) by extensions ['ignore', 'ignore_ament_install']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/_out) by extension 'ignore'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/_out) by extension 'ignore_ament_install'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/_out) by extensions ['colcon_pkg']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/_out) by extension 'colcon_pkg'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/_out) by extensions ['colcon_meta']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/_out) by extension 'colcon_meta'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/_out) by extensions ['ros']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/_out) by extension 'ros'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/_out) by extensions ['cmake', 'python']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/_out) by extension 'cmake'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/_out) by extension 'python'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/_out) by extensions ['python_setup_py']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/_out) by extension 'python_setup_py'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/lateral-control) by extensions ['ignore', 'ignore_ament_install']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/lateral-control) by extension 'ignore'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/lateral-control) by extension 'ignore_ament_install'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/lateral-control) by extensions ['colcon_pkg']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/lateral-control) by extension 'colcon_pkg'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/lateral-control) by extensions ['colcon_meta']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/lateral-control) by extension 'colcon_meta'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/lateral-control) by extensions ['ros']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/lateral-control) by extension 'ros'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/lateral-control) by extensions ['cmake', 'python']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/lateral-control) by extension 'cmake'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/lateral-control) by extension 'python'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/lateral-control) by extensions ['python_setup_py']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/lateral-control) by extension 'python_setup_py'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/lateral-control/figs) by extensions ['ignore', 'ignore_ament_install']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/lateral-control/figs) by extension 'ignore'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/lateral-control/figs) by extension 'ignore_ament_install'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/lateral-control/figs) by extensions ['colcon_pkg']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/lateral-control/figs) by extension 'colcon_pkg'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/lateral-control/figs) by extensions ['colcon_meta']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/lateral-control/figs) by extension 'colcon_meta'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/lateral-control/figs) by extensions ['ros']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/lateral-control/figs) by extension 'ros'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/lateral-control/figs) by extensions ['cmake', 'python']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/lateral-control/figs) by extension 'cmake'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/lateral-control/figs) by extension 'python'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/lateral-control/figs) by extensions ['python_setup_py']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/lateral-control/figs) by extension 'python_setup_py'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/longitudinal-control) by extensions ['ignore', 'ignore_ament_install']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/longitudinal-control) by extension 'ignore'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/longitudinal-control) by extension 'ignore_ament_install'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/longitudinal-control) by extensions ['colcon_pkg']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/longitudinal-control) by extension 'colcon_pkg'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/longitudinal-control) by extensions ['colcon_meta']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/longitudinal-control) by extension 'colcon_meta'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/longitudinal-control) by extensions ['ros']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/longitudinal-control) by extension 'ros'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/longitudinal-control) by extensions ['cmake', 'python']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/longitudinal-control) by extension 'cmake'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/longitudinal-control) by extension 'python'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/longitudinal-control) by extensions ['python_setup_py']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/3-trajectory-tracking/longitudinal-control) by extension 'python_setup_py'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/4-motion-planning) by extensions ['ignore', 'ignore_ament_install']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/4-motion-planning) by extension 'ignore'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/4-motion-planning) by extension 'ignore_ament_install'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/4-motion-planning) by extensions ['colcon_pkg']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/4-motion-planning) by extension 'colcon_pkg'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/4-motion-planning) by extensions ['colcon_meta']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/4-motion-planning) by extension 'colcon_meta'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/4-motion-planning) by extensions ['ros']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/4-motion-planning) by extension 'ros'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/4-motion-planning) by extensions ['cmake', 'python']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/4-motion-planning) by extension 'cmake'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/4-motion-planning) by extension 'python'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/4-motion-planning) by extensions ['python_setup_py']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/book/4-motion-planning) by extension 'python_setup_py'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/run_server) by extensions ['ignore', 'ignore_ament_install']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/run_server) by extension 'ignore'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/run_server) by extension 'ignore_ament_install'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/run_server) by extensions ['colcon_pkg']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/run_server) by extension 'colcon_pkg'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/run_server) by extensions ['colcon_meta']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/run_server) by extension 'colcon_meta'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/run_server) by extensions ['ros']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/run_server) by extension 'ros'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/run_server) by extensions ['cmake', 'python']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/run_server) by extension 'cmake'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/run_server) by extension 'python'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/run_server) by extensions ['python_setup_py']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/run_server) by extension 'python_setup_py'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/run_visualization) by extensions ['ignore', 'ignore_ament_install']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/run_visualization) by extension 'ignore'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/run_visualization) by extension 'ignore_ament_install'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/run_visualization) by extensions ['colcon_pkg']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/run_visualization) by extension 'colcon_pkg'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/run_visualization) by extensions ['colcon_meta']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/run_visualization) by extension 'colcon_meta'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/run_visualization) by extensions ['ros']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/run_visualization) by extension 'ros'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/run_visualization) by extensions ['cmake', 'python']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/run_visualization) by extension 'cmake'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/run_visualization) by extension 'python'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/run_visualization) by extensions ['python_setup_py']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/autonomous-driving-book/run_visualization) by extension 'python_setup_py'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/controller) by extensions ['ignore', 'ignore_ament_install']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/controller) by extension 'ignore'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/controller) by extension 'ignore_ament_install'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/controller) by extensions ['colcon_pkg']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/controller) by extension 'colcon_pkg'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/controller) by extensions ['colcon_meta']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/controller) by extension 'colcon_meta'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/controller) by extensions ['ros']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/controller) by extension 'ros'
+[0.237s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/controller' with type 'ros.catkin' and name 'controller'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/experiment) by extensions ['ignore', 'ignore_ament_install']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/experiment) by extension 'ignore'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/experiment) by extension 'ignore_ament_install'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/experiment) by extensions ['colcon_pkg']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/experiment) by extension 'colcon_pkg'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/experiment) by extensions ['colcon_meta']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/experiment) by extension 'colcon_meta'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/experiment) by extensions ['ros']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/experiment) by extension 'ros'
+[0.238s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/experiment' with type 'ros.catkin' and name 'experiment'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/latihan) by extensions ['ignore', 'ignore_ament_install']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/latihan) by extension 'ignore'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/latihan) by extension 'ignore_ament_install'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/latihan) by extensions ['colcon_pkg']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/latihan) by extension 'colcon_pkg'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/latihan) by extensions ['colcon_meta']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/latihan) by extension 'colcon_meta'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/latihan) by extensions ['ros']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/latihan) by extension 'ros'
+[0.240s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/latihan' with type 'ros.catkin' and name 'latihan'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc) by extensions ['ignore', 'ignore_ament_install']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc) by extension 'ignore'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc) by extension 'ignore_ament_install'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc) by extensions ['colcon_pkg']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc) by extension 'colcon_pkg'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc) by extensions ['colcon_meta']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc) by extension 'colcon_meta'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc) by extensions ['ros']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc) by extension 'ros'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc) by extensions ['cmake', 'python']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc) by extension 'cmake'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc) by extension 'python'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc) by extensions ['python_setup_py']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc) by extension 'python_setup_py'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/PythonAPI) by extensions ['ignore', 'ignore_ament_install']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/PythonAPI) by extension 'ignore'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/PythonAPI) by extension 'ignore_ament_install'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/PythonAPI) by extensions ['colcon_pkg']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/PythonAPI) by extension 'colcon_pkg'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/PythonAPI) by extensions ['colcon_meta']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/PythonAPI) by extension 'colcon_meta'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/PythonAPI) by extensions ['ros']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/PythonAPI) by extension 'ros'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/PythonAPI) by extensions ['cmake', 'python']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/PythonAPI) by extension 'cmake'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/PythonAPI) by extension 'python'
+[0.243s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/misc/PythonAPI' with type 'cmake' and name 'PythonAPI'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator) by extensions ['ignore', 'ignore_ament_install']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator) by extension 'ignore'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator) by extension 'ignore_ament_install'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator) by extensions ['colcon_pkg']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator) by extension 'colcon_pkg'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator) by extensions ['colcon_meta']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator) by extension 'colcon_meta'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator) by extensions ['ros']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator) by extension 'ros'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator) by extensions ['cmake', 'python']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator) by extension 'cmake'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator) by extension 'python'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator) by extensions ['python_setup_py']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator) by extension 'python_setup_py'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/carla_map_data) by extensions ['ignore', 'ignore_ament_install']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/carla_map_data) by extension 'ignore'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/carla_map_data) by extension 'ignore_ament_install'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/carla_map_data) by extensions ['colcon_pkg']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/carla_map_data) by extension 'colcon_pkg'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/carla_map_data) by extensions ['colcon_meta']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/carla_map_data) by extension 'colcon_meta'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/carla_map_data) by extensions ['ros']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/carla_map_data) by extension 'ros'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/carla_map_data) by extensions ['cmake', 'python']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/carla_map_data) by extension 'cmake'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/carla_map_data) by extension 'python'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/carla_map_data) by extensions ['python_setup_py']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/carla_map_data) by extension 'python_setup_py'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/images) by extensions ['ignore', 'ignore_ament_install']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/images) by extension 'ignore'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/images) by extension 'ignore_ament_install'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/images) by extensions ['colcon_pkg']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/images) by extension 'colcon_pkg'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/images) by extensions ['colcon_meta']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/images) by extension 'colcon_meta'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/images) by extensions ['ros']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/images) by extension 'ros'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/images) by extensions ['cmake', 'python']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/images) by extension 'cmake'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/images) by extension 'python'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/images) by extensions ['python_setup_py']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/images) by extension 'python_setup_py'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts) by extensions ['ignore', 'ignore_ament_install']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts) by extension 'ignore'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts) by extension 'ignore_ament_install'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts) by extensions ['colcon_pkg']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts) by extension 'colcon_pkg'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts) by extensions ['colcon_meta']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts) by extension 'colcon_meta'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts) by extensions ['ros']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts) by extension 'ros'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts) by extensions ['cmake', 'python']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts) by extension 'cmake'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts) by extension 'python'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts) by extensions ['python_setup_py']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts) by extension 'python_setup_py'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts/__pycache__) by extensions ['ignore', 'ignore_ament_install']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts/__pycache__) by extension 'ignore'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts/__pycache__) by extension 'ignore_ament_install'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts/__pycache__) by extensions ['colcon_pkg']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts/__pycache__) by extension 'colcon_pkg'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts/__pycache__) by extensions ['colcon_meta']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts/__pycache__) by extension 'colcon_meta'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts/__pycache__) by extensions ['ros']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts/__pycache__) by extension 'ros'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts/__pycache__) by extensions ['cmake', 'python']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts/__pycache__) by extension 'cmake'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts/__pycache__) by extension 'python'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts/__pycache__) by extensions ['python_setup_py']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts/__pycache__) by extension 'python_setup_py'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts/images) by extensions ['ignore', 'ignore_ament_install']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts/images) by extension 'ignore'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts/images) by extension 'ignore_ament_install'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts/images) by extensions ['colcon_pkg']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts/images) by extension 'colcon_pkg'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts/images) by extensions ['colcon_meta']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts/images) by extension 'colcon_meta'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts/images) by extensions ['ros']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts/images) by extension 'ros'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts/images) by extensions ['cmake', 'python']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts/images) by extension 'cmake'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts/images) by extension 'python'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts/images) by extensions ['python_setup_py']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/misc/carla_route_generator/scripts/images) by extension 'python_setup_py'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-carla-interface) by extensions ['ignore', 'ignore_ament_install']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-carla-interface) by extension 'ignore'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-carla-interface) by extension 'ignore_ament_install'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-carla-interface) by extensions ['colcon_pkg']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-carla-interface) by extension 'colcon_pkg'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-carla-interface) by extensions ['colcon_meta']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-carla-interface) by extension 'colcon_meta'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-carla-interface) by extensions ['ros']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-carla-interface) by extension 'ros'
+[0.250s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/sem-apc-carla-interface' with type 'ros.catkin' and name 'carla_shell_bridge'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge) by extensions ['ignore', 'ignore_ament_install']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge) by extension 'ignore'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge) by extension 'ignore_ament_install'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge) by extensions ['colcon_pkg']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge) by extension 'colcon_pkg'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge) by extensions ['colcon_meta']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge) by extension 'colcon_meta'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge) by extensions ['ros']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge) by extension 'ros'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge) by extensions ['cmake', 'python']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge) by extension 'cmake'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge) by extension 'python'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge) by extensions ['python_setup_py']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge) by extension 'python_setup_py'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ackermann_control) by extensions ['ignore', 'ignore_ament_install']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ackermann_control) by extension 'ignore'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ackermann_control) by extension 'ignore_ament_install'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ackermann_control) by extensions ['colcon_pkg']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ackermann_control) by extension 'colcon_pkg'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ackermann_control) by extensions ['colcon_meta']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ackermann_control) by extension 'colcon_meta'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ackermann_control) by extensions ['ros']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ackermann_control) by extension 'ros'
+[0.256s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ackermann_control' with type 'ros.ament_python' and name 'carla_ackermann_control'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ackermann_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ackermann_msgs) by extension 'ignore'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ackermann_msgs) by extension 'ignore_ament_install'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ackermann_msgs) by extensions ['colcon_pkg']
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ackermann_msgs) by extension 'colcon_pkg'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ackermann_msgs) by extensions ['colcon_meta']
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ackermann_msgs) by extension 'colcon_meta'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ackermann_msgs) by extensions ['ros']
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ackermann_msgs) by extension 'ros'
+[0.261s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ackermann_msgs' with type 'ros.ament_cmake' and name 'carla_ackermann_msgs'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ad_agent) by extensions ['ignore', 'ignore_ament_install']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ad_agent) by extension 'ignore'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ad_agent) by extension 'ignore_ament_install'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ad_agent) by extensions ['colcon_pkg']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ad_agent) by extension 'colcon_pkg'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ad_agent) by extensions ['colcon_meta']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ad_agent) by extension 'colcon_meta'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ad_agent) by extensions ['ros']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ad_agent) by extension 'ros'
+[0.264s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ad_agent' with type 'ros.ament_python' and name 'carla_ad_agent'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_common) by extensions ['ignore', 'ignore_ament_install']
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_common) by extension 'ignore'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_common) by extension 'ignore_ament_install'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_common) by extensions ['colcon_pkg']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_common) by extension 'colcon_pkg'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_common) by extensions ['colcon_meta']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_common) by extension 'colcon_meta'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_common) by extensions ['ros']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_common) by extension 'ros'
+[0.266s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_common' with type 'ros.ament_python' and name 'carla_common'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_manual_control) by extensions ['ignore', 'ignore_ament_install']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_manual_control) by extension 'ignore'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_manual_control) by extension 'ignore_ament_install'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_manual_control) by extensions ['colcon_pkg']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_manual_control) by extension 'colcon_pkg'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_manual_control) by extensions ['colcon_meta']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_manual_control) by extension 'colcon_meta'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_manual_control) by extensions ['ros']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_manual_control) by extension 'ros'
+[0.270s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_manual_control' with type 'ros.ament_python' and name 'carla_manual_control'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_msgs) by extension 'ignore'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_msgs) by extension 'ignore_ament_install'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_msgs) by extensions ['colcon_pkg']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_msgs) by extension 'colcon_pkg'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_msgs) by extensions ['colcon_meta']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_msgs) by extension 'colcon_meta'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_msgs) by extensions ['ros']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_msgs) by extension 'ros'
+[0.274s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_msgs' with type 'ros.ament_cmake' and name 'carla_msgs'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ros_bridge) by extensions ['ignore', 'ignore_ament_install']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ros_bridge) by extension 'ignore'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ros_bridge) by extension 'ignore_ament_install'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ros_bridge) by extensions ['colcon_pkg']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ros_bridge) by extension 'colcon_pkg'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ros_bridge) by extensions ['colcon_meta']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ros_bridge) by extension 'colcon_meta'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ros_bridge) by extensions ['ros']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ros_bridge) by extension 'ros'
+[0.278s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ros_bridge' with type 'ros.ament_python' and name 'carla_ros_bridge'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ros_scenario_runner) by extensions ['ignore', 'ignore_ament_install']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ros_scenario_runner) by extension 'ignore'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ros_scenario_runner) by extension 'ignore_ament_install'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ros_scenario_runner) by extensions ['colcon_pkg']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ros_scenario_runner) by extension 'colcon_pkg'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ros_scenario_runner) by extensions ['colcon_meta']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ros_scenario_runner) by extension 'colcon_meta'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ros_scenario_runner) by extensions ['ros']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ros_scenario_runner) by extension 'ros'
+[0.281s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ros_scenario_runner' with type 'ros.ament_python' and name 'carla_ros_scenario_runner'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ros_scenario_runner_types) by extensions ['ignore', 'ignore_ament_install']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ros_scenario_runner_types) by extension 'ignore'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ros_scenario_runner_types) by extension 'ignore_ament_install'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ros_scenario_runner_types) by extensions ['colcon_pkg']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ros_scenario_runner_types) by extension 'colcon_pkg'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ros_scenario_runner_types) by extensions ['colcon_meta']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ros_scenario_runner_types) by extension 'colcon_meta'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ros_scenario_runner_types) by extensions ['ros']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ros_scenario_runner_types) by extension 'ros'
+[0.297s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_ros_scenario_runner_types' with type 'ros.ament_cmake' and name 'carla_ros_scenario_runner_types'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_spawn_objects) by extensions ['ignore', 'ignore_ament_install']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_spawn_objects) by extension 'ignore'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_spawn_objects) by extension 'ignore_ament_install'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_spawn_objects) by extensions ['colcon_pkg']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_spawn_objects) by extension 'colcon_pkg'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_spawn_objects) by extensions ['colcon_meta']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_spawn_objects) by extension 'colcon_meta'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_spawn_objects) by extensions ['ros']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_spawn_objects) by extension 'ros'
+[0.300s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_spawn_objects' with type 'ros.ament_python' and name 'carla_spawn_objects'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_twist_to_control) by extensions ['ignore', 'ignore_ament_install']
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_twist_to_control) by extension 'ignore'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_twist_to_control) by extension 'ignore_ament_install'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_twist_to_control) by extensions ['colcon_pkg']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_twist_to_control) by extension 'colcon_pkg'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_twist_to_control) by extensions ['colcon_meta']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_twist_to_control) by extension 'colcon_meta'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_twist_to_control) by extensions ['ros']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_twist_to_control) by extension 'ros'
+[0.303s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_twist_to_control' with type 'ros.ament_python' and name 'carla_twist_to_control'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_walker_agent) by extensions ['ignore', 'ignore_ament_install']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_walker_agent) by extension 'ignore'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_walker_agent) by extension 'ignore_ament_install'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_walker_agent) by extensions ['colcon_pkg']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_walker_agent) by extension 'colcon_pkg'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_walker_agent) by extensions ['colcon_meta']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_walker_agent) by extension 'colcon_meta'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_walker_agent) by extensions ['ros']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_walker_agent) by extension 'ros'
+[0.306s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_walker_agent' with type 'ros.ament_python' and name 'carla_walker_agent'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_waypoint_publisher) by extensions ['ignore', 'ignore_ament_install']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_waypoint_publisher) by extension 'ignore'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_waypoint_publisher) by extension 'ignore_ament_install'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_waypoint_publisher) by extensions ['colcon_pkg']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_waypoint_publisher) by extension 'colcon_pkg'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_waypoint_publisher) by extensions ['colcon_meta']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_waypoint_publisher) by extension 'colcon_meta'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_waypoint_publisher) by extensions ['ros']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_waypoint_publisher) by extension 'ros'
+[0.309s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_waypoint_publisher' with type 'ros.ament_python' and name 'carla_waypoint_publisher'
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_waypoint_types) by extensions ['ignore', 'ignore_ament_install']
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_waypoint_types) by extension 'ignore'
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_waypoint_types) by extension 'ignore_ament_install'
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_waypoint_types) by extensions ['colcon_pkg']
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_waypoint_types) by extension 'colcon_pkg'
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_waypoint_types) by extensions ['colcon_meta']
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_waypoint_types) by extension 'colcon_meta'
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_waypoint_types) by extensions ['ros']
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_waypoint_types) by extension 'ros'
+[0.312s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/carla_waypoint_types' with type 'ros.ament_cmake' and name 'carla_waypoint_types'
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docker) by extensions ['ignore', 'ignore_ament_install']
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docker) by extension 'ignore'
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docker) by extension 'ignore_ament_install'
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docker) by extensions ['colcon_pkg']
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docker) by extension 'colcon_pkg'
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docker) by extensions ['colcon_meta']
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docker) by extension 'colcon_meta'
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docker) by extensions ['ros']
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docker) by extension 'ros'
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docker) by extensions ['cmake', 'python']
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docker) by extension 'cmake'
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docker) by extension 'python'
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docker) by extensions ['python_setup_py']
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docker) by extension 'python_setup_py'
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docker/content) by extensions ['ignore', 'ignore_ament_install']
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docker/content) by extension 'ignore'
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docker/content) by extension 'ignore_ament_install'
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docker/content) by extensions ['colcon_pkg']
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docker/content) by extension 'colcon_pkg'
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docker/content) by extensions ['colcon_meta']
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docker/content) by extension 'colcon_meta'
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docker/content) by extensions ['ros']
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docker/content) by extension 'ros'
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docker/content) by extensions ['cmake', 'python']
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docker/content) by extension 'cmake'
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docker/content) by extension 'python'
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docker/content) by extensions ['python_setup_py']
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docker/content) by extension 'python_setup_py'
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docs) by extensions ['ignore', 'ignore_ament_install']
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docs) by extension 'ignore'
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docs) by extension 'ignore_ament_install'
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docs) by extensions ['colcon_pkg']
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docs) by extension 'colcon_pkg'
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docs) by extensions ['colcon_meta']
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docs) by extension 'colcon_meta'
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docs) by extensions ['ros']
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docs) by extension 'ros'
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docs) by extensions ['cmake', 'python']
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docs) by extension 'cmake'
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docs) by extension 'python'
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docs) by extensions ['python_setup_py']
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docs) by extension 'python_setup_py'
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docs/images) by extensions ['ignore', 'ignore_ament_install']
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docs/images) by extension 'ignore'
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docs/images) by extension 'ignore_ament_install'
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docs/images) by extensions ['colcon_pkg']
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docs/images) by extension 'colcon_pkg'
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docs/images) by extensions ['colcon_meta']
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docs/images) by extension 'colcon_meta'
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docs/images) by extensions ['ros']
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docs/images) by extension 'ros'
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docs/images) by extensions ['cmake', 'python']
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docs/images) by extension 'cmake'
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docs/images) by extension 'python'
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docs/images) by extensions ['python_setup_py']
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/docs/images) by extension 'python_setup_py'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging) by extensions ['ignore', 'ignore_ament_install']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging) by extension 'ignore'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging) by extension 'ignore_ament_install'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging) by extensions ['colcon_pkg']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging) by extension 'colcon_pkg'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging) by extensions ['colcon_meta']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging) by extension 'colcon_meta'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging) by extensions ['ros']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging) by extension 'ros'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging) by extensions ['cmake', 'python']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging) by extension 'cmake'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging) by extension 'python'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging) by extensions ['python_setup_py']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging) by extension 'python_setup_py'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging/debian) by extensions ['ignore', 'ignore_ament_install']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging/debian) by extension 'ignore'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging/debian) by extension 'ignore_ament_install'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging/debian) by extensions ['colcon_pkg']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging/debian) by extension 'colcon_pkg'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging/debian) by extensions ['colcon_meta']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging/debian) by extension 'colcon_meta'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging/debian) by extensions ['ros']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging/debian) by extension 'ros'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging/debian) by extensions ['cmake', 'python']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging/debian) by extension 'cmake'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging/debian) by extension 'python'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging/debian) by extensions ['python_setup_py']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging/debian) by extension 'python_setup_py'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging/debian/source) by extensions ['ignore', 'ignore_ament_install']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging/debian/source) by extension 'ignore'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging/debian/source) by extension 'ignore_ament_install'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging/debian/source) by extensions ['colcon_pkg']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging/debian/source) by extension 'colcon_pkg'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging/debian/source) by extensions ['colcon_meta']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging/debian/source) by extension 'colcon_meta'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging/debian/source) by extensions ['ros']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging/debian/source) by extension 'ros'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging/debian/source) by extensions ['cmake', 'python']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging/debian/source) by extension 'cmake'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging/debian/source) by extension 'python'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging/debian/source) by extensions ['python_setup_py']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/packaging/debian/source) by extension 'python_setup_py'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/pcl_recorder) by extensions ['ignore', 'ignore_ament_install']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/pcl_recorder) by extension 'ignore'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/pcl_recorder) by extension 'ignore_ament_install'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/pcl_recorder) by extensions ['colcon_pkg']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/pcl_recorder) by extension 'colcon_pkg'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/pcl_recorder) by extensions ['colcon_meta']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/pcl_recorder) by extension 'colcon_meta'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/pcl_recorder) by extensions ['ros']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/pcl_recorder) by extension 'ros'
+[0.321s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/pcl_recorder' with type 'ros.ament_cmake' and name 'pcl_recorder'
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/ros_compatibility) by extensions ['ignore', 'ignore_ament_install']
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/ros_compatibility) by extension 'ignore'
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/ros_compatibility) by extension 'ignore_ament_install'
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/ros_compatibility) by extensions ['colcon_pkg']
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/ros_compatibility) by extension 'colcon_pkg'
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/ros_compatibility) by extensions ['colcon_meta']
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/ros_compatibility) by extension 'colcon_meta'
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/ros_compatibility) by extensions ['ros']
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/ros_compatibility) by extension 'ros'
+[0.325s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/ros_compatibility' with type 'ros.ament_python' and name 'ros_compatibility'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/rqt_carla_control) by extensions ['ignore', 'ignore_ament_install']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/rqt_carla_control) by extension 'ignore'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/rqt_carla_control) by extension 'ignore_ament_install'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/rqt_carla_control) by extensions ['colcon_pkg']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/rqt_carla_control) by extension 'colcon_pkg'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/rqt_carla_control) by extensions ['colcon_meta']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/rqt_carla_control) by extension 'colcon_meta'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/rqt_carla_control) by extensions ['ros']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/rqt_carla_control) by extension 'ros'
+[0.327s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/rqt_carla_control' with type 'ros.ament_python' and name 'rqt_carla_control'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/rviz_carla_plugin) by extensions ['ignore', 'ignore_ament_install']
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/rviz_carla_plugin) by extension 'ignore'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/rviz_carla_plugin) by extension 'ignore_ament_install'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/rviz_carla_plugin) by extensions ['colcon_pkg']
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/rviz_carla_plugin) by extension 'colcon_pkg'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/rviz_carla_plugin) by extensions ['colcon_meta']
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/rviz_carla_plugin) by extension 'colcon_meta'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/rviz_carla_plugin) by extensions ['ros']
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/rviz_carla_plugin) by extension 'ros'
+[0.331s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lexciese/Dev/projects/sem-apc/src/sem-apc-ros-bridge/rviz_carla_plugin' with type 'ros.ament_cmake' and name 'rviz_carla_plugin'
+[0.331s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults

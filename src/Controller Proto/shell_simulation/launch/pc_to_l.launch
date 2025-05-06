@@ -1,0 +1,28 @@
+<launch>
+    <!-- Sleep for a second before launching to ensure the environment is up -->
+    <node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="pointcloud_to_laserscan" launch-prefix="bash -c 'sleep 1.0; $0 $@'">
+        <remap from="cloud_in" to="/carla/ego_vehicle/vlp16_1"/>
+        <remap from="scan" to="/carla/ego_vehicle/scan"/>
+        <rosparam>
+            target_frame: ego_vehicle
+            transform_tolerance: 0.01
+            min_height: 0.5
+            max_height: 1.7
+
+            angle_min: -3.1416 # -M_PI/2
+            angle_max: 3.1416 # M_PI/2
+            angle_increment: 0.0175 # M_PI/180.0
+            scan_time: 0.3333
+            range_min: 0.5
+            range_max: 10.0
+            use_inf: true
+            inf_epsilon: 1.0
+
+            # Concurrency level, affects number of pointclouds queued for processing and number of threads used
+            # 0 : Detect number of cores
+            # 1 : Single threaded
+            # 2->inf : Parallelism level
+            concurrency_level: 1
+        </rosparam>
+    </node>
+</launch>
