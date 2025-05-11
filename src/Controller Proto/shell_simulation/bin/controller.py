@@ -41,6 +41,12 @@ class Controller_Carla(object):
         self.prev_steering = 0.0  # For steering filtering
         self.steering_filter = 0.4  # Steering filter coefficient
 
+        # Parameters for turn-based cruise control
+        self.enable_turn_cruise = True  # Enable/disable feature
+        self.cruise_start_distance = 15.0  # Start slowing down this many meters before a turn
+        self.min_turn_speed = 3.0  # m/s - minimum speed for turns
+        self.speed_reduction_factor = 0.6  # How much to reduce speed for sharper turns
+
         #Publisher
         if IS_SUBMISSION:
             self.pub_throttle = rospy.Publisher("/throttle_command", Float64, queue_size=10)
@@ -164,6 +170,42 @@ class Controller_Carla(object):
             target_point = path_points[closest_idx]
             
         return target_point
+
+    def calculate_turn_speed(self, current_speed, turn_info):
+        """Calculate appropriate speed for an upcoming turn"""
+        if not turn_info or not self.enable_turn_cruise:
+            return self.v_desired
+            
+        distance, curvature, direction = turn_info
+        
+        # Only start slowing if we're within cruise_start_distance
+        if distance > self.cruise_start_distance:
+            return self.v_desired
+            
+        # Calculate how sharp the turn is (normalize curvature)
+        # Higher curvature = sharper turn = lower speed
+        sharpness = min(1.0, abs(curvature) / 0.1)  # Normalized between 0-1
+        
+        # Calculate speed reduction based on turn sharpness
+        # Sharper turns get closer to min_turn_speed
+        speed_range = self.v_desired - self.min_turn_speed
+        turn_speed = self.v_desired - (sharpness * speed_range * self.speed_reduction_factor)
+        
+        # Gradually reduce speed as we get closer to the turn
+        # At cruise_start_distance: full speed
+        # At 0 distance: turn_speed
+        if distance > 0:
+            # Linear interpolation
+            cruise_factor = distance / self.cruise_start_distance
+            target_speed = turn_speed + cruise_factor * (self.v_desired - turn_speed)
+        else:
+            target_speed = turn_speed
+            
+        # Log when speed is being reduced for turns
+        if target_speed < self.v_desired:
+            rospy.logwarn(f"CRUISE CONTROL: Reducing speed to {target_speed:.1f} m/s for {direction} turn {distance:.1f}m ahead")
+            
+        return target_speed
 
     def check_car_info(self):
         r = rospy.Rate(60)
@@ -296,9 +338,14 @@ class Controller_Carla(object):
 
             ######################### Longitudinal ############################
             isWarning = front_d < 8.0
-
-            # Check if obstacle is too close - was previously using isState2
-            # Replacing the removed state attribute with direct obstacle check
+            
+            # Get information about upcoming turns for cruise control
+            turn_info = self.waypoint_selection.get_upcoming_turn_info()
+            
+            # Calculate target speed based on turns (default is v_desired)
+            turn_target_speed = self.calculate_turn_speed(v_car, turn_info)
+            
+            # Check if obstacle is too close
             if (isWarning and v_car <= self.v_desired):
                 isMaintain = True
             elif (isWarning and v_car > self.v_desired):
@@ -350,17 +397,25 @@ class Controller_Carla(object):
                 
                 last_error_v = delta_v
             
-            # Case 3: Normal speed control
+            # Case 3: Normal speed control with turn-based cruise
             else:
-                # Calculate velocity error
-                delta_v = self.v_desired - v_car
+                # Use the turn-based target speed instead of default v_desired
+                delta_v = turn_target_speed - v_car
+                
+                # Log cruising status with current and target speeds
+                if turn_target_speed < self.v_desired:
+                    cruising_pct = (turn_target_speed / self.v_desired) * 100
+                    rospy.logwarn(f"CRUISING: Current speed={v_car:.2f} m/s, Target={turn_target_speed:.2f} m/s ({cruising_pct:.0f}% of max)")
+                elif abs(v_car - self.v_desired) < 0.5:
+                    rospy.logwarn(f"NORMAL SPEED: Maintaining {v_car:.2f} m/s")
                 
                 # Apply PID control for target speed
                 control_signal, int_val_v = self.calculate_pid(
                     delta_v, last_error_v, int_val_v, self.kp, self.ki, self.kd
                 )
                 
-                # Apply throttle or brake
+                # Apply throttle or brake - note we may still get negative control_signal 
+                # if we're going too fast, but that's OK for smooth deceleration
                 throttle_output, brake_output = self.apply_throttle_brake(
                     control_signal, throttle_previous, brake_previous, finish_gliding
                 )
