@@ -23,10 +23,10 @@ class Controller_Carla(object):
         self.odom_data_processor = OdometryProcessor()
         self.waypoint_selection = WaypointSelection(pointer)
 
-        self.d_aman = 6.5 
+        self.d_aman = 5 # Default 6.5
         # Desired velocity - convert from km/h to m/s
         KMH_TO_MS = 1/3.6  # Conversion factor from km/h to m/s
-        self.v_desired = 35 * KMH_TO_MS  # 17.625 km/h ≈ 4.9 m/s
+        self.v_desired = 30 * KMH_TO_MS  # 17.625 km/h ≈ 4.9 m/s
         self.init_time = None
         self.distance = 0.0
         self.last_pose = None
@@ -37,9 +37,9 @@ class Controller_Carla(object):
         self.kd = 0.778
 
         # Pure Pursuit Parameters
-        self.k_gain = 0.7  # Controller gain
-        self.min_look_ahead = 1.0  # Minimum look-ahead distance
-        self.max_look_ahead = 3.0  # Maximum look-ahead distance
+        self.k_gain = 1.3  # Controller gain, default 0.7
+        self.min_look_ahead = 0.2  # Minimum look-ahead distance
+        self.max_look_ahead = 4.0  # Maximum look-ahead distance
         self.ld_gain = 0.3  # Look-ahead distance gain based on velocity
         self.prev_steering = 0.0  # For steering filtering
         self.steering_filter = 0.7  # Steering filter coefficient
@@ -248,7 +248,7 @@ class Controller_Carla(object):
             x0_y0, x1_y1, front_d = self.waypoint_selection.waypoint_goal()
 
             #Finish Gliding
-            last_point = [396, -322]
+            last_point = [396.3, -183.13]
             last_point_distance = np.linalg.norm(np.array(car_data[0:2]) - np.array(last_point))
             finish_gliding = (last_point_distance  <= 13.65)
             finish = (last_point_distance <= 3)
@@ -462,9 +462,11 @@ class Controller_Carla(object):
                              f'Distance to goal: {last_point_distance:.1f}m | '
                              f'Speed: {car_data[2]:.2f}m/s | '
                              f'Total traveled: {self.distance:.1f}m | '
-                             f'Collisions: {self.collision_count}')
+                             f'Collisions: {self.collision_count} |'
+                             f'Current Position: {car_data[0]:.2f}, {car_data[1]:.2f} | ')
             else:
                 rospy.logwarn(f'LD: {last_point_distance:.1f}, V: {car_data[2]:.2f}, Collisions: {self.collision_count}')
+                exit(0)
             
         r.sleep()
 
