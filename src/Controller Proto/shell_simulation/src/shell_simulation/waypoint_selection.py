@@ -30,41 +30,68 @@ class WaypointSelection(object):
 
         self.s_min_f = 8.0
 
-        # Adjust curvature detection parameters for higher sensitivity
-        self.curvature_window = 10  # Smaller window to detect more localized curves
-        self.curvature_threshold = 0.05  # Lower threshold to detect subtle curves
+        # Adjust curvature detection parameters for earlier detection
+        self.curvature_window = 50  # Look much further ahead (approx 10m with 0.2m spacing)
+        self.planning_horizon = 100  # Even longer horizon for planning
+        self.curvature_threshold = 0.04  # Slightly more sensitive
         self.last_curvature_log = 0
-        self.curvature_log_interval = 5  # More frequent logging
-        self.debug_curve = False  # Enable detailed curve debugging
+        self.curvature_log_interval = 5
+        self.debug_curve = False
+        
+        # Track upcoming turns for speed planning
+        self.upcoming_turn = None  # Will store (distance, curvature, direction)
+        self.turn_detected = False
+        self.turn_distance_threshold = 15.0  # Detect turns up to 15 meters ahead
 
-    def detect_curvature(self):
+    def detect_curvature(self, lookahead=None):
         """
         Detect curvature in the upcoming road segment using the offline trajectory.
-        Returns the estimated curvature and turn direction.
+        Args:
+            lookahead: Optional parameter to specify how far to look ahead
+        Returns the estimated curvature, turn direction, and distance to the turn
         """
         waypoint_data = self.waypoints
         
+        # Use provided lookahead or default window
+        window_size = lookahead if lookahead else self.curvature_window
+        
         # Need at least 3 points to calculate curvature
-        if self.pointer + self.curvature_window >= len(waypoint_data):
-            return 0, "straight"
+        if self.pointer + window_size >= len(waypoint_data):
+            return 0, "straight", float('inf')
         
         # Get a window of points ahead of current position
         points = []
-        for i in range(self.curvature_window):
+        distances = []  # Track distances from current position to each point
+        cumulative_distance = 0
+        car_data = self.odom_data_processor.get_car_info()
+        car_pos = np.array([car_data[0], car_data[1]])
+        
+        prev_point = None
+        for i in range(window_size):
             idx = self.pointer + i
             if idx < len(waypoint_data):
-                points.append(np.array([waypoint_data[idx][0], waypoint_data[idx][1]]))
+                point = np.array([waypoint_data[idx][0], waypoint_data[idx][1]])
+                points.append(point)
+                
+                # Calculate distance from car to this point
+                if i == 0:
+                    # First point distance is direct from car
+                    segment_distance = np.linalg.norm(point - car_pos)
+                else:
+                    # Subsequent points are cumulative along path
+                    segment_distance = np.linalg.norm(point - prev_point)
+                
+                cumulative_distance += segment_distance
+                distances.append(cumulative_distance)
+                prev_point = point
         
         if len(points) < 3:
-            return 0, "straight"
+            return 0, "straight", float('inf')
             
-        # Calculate curvature using multiple points - print first few points for debugging
-        if self.debug_curve:
-            rospy.logwarn(f"Analyzing points near waypoint {self.pointer}: {points[0]}, {points[1]}, {points[2]}")
-        
-        # Alternative curvature calculation using circle fitting
-        # This can be more stable than angle-based calculation
+        # Calculate curvature using multiple points
         curvatures = []
+        curvature_distances = []  # Distance from current position to each curvature point
+        
         for i in range(len(points) - 2):
             p1, p2, p3 = points[i], points[i+1], points[i+2]
             
@@ -90,42 +117,73 @@ class WaypointSelection(object):
             dot_product = max(-1.0, min(1.0, dot_product))
             angle = math.acos(dot_product)
             
-            # Method 2: Menger curvature (uses cross product)
+            # Cross product for direction
             cross_z = np.cross(v1, v2)
             
             # Curvature = 2*sin(angle) / triangle side length
-            # More pronounced for sharper turns
             if d1 > 0 and d2 > 0:
                 segment_length = (d1 + d2) / 2
                 curvature = 2 * math.sin(angle/2) / segment_length
+                
+                # Store the curvature and its distance
                 curvatures.append(curvature)
+                # Use distance to middle point (p2) as reference
+                curvature_distances.append(distances[i+1])
                 
                 # Debug individual point curvature
                 if self.debug_curve and abs(curvature) > self.curvature_threshold/2:
-                    rospy.logwarn(f"Point {i} curvature: {curvature:.6f}, angle: {angle:.4f} rad")
+                    rospy.logwarn(f"Point {i} curvature: {curvature:.6f}, angle: {angle:.4f} rad, distance: {distances[i+1]:.2f}m")
         
         if not curvatures:
-            return 0, "straight"
-            
-        # Average curvature, weighted more heavily toward maximum values
-        avg_curvature = sum(curvatures) / len(curvatures)
-        max_curvature = max(curvatures, key=abs)
-        weighted_curvature = (avg_curvature + max_curvature) / 2
+            return 0, "straight", float('inf')
         
-        # For debug, log both average and maximum
-        if self.debug_curve:
-            rospy.logwarn(f"Avg curvature: {avg_curvature:.6f}, Max: {max_curvature:.6f}, Weighted: {weighted_curvature:.6f}")
-            
-        # Determine turn direction using cross product of first set of vectors
-        # Take the direction from the point with highest curvature for accuracy
-        max_idx = curvatures.index(max(curvatures, key=abs))
-        v1 = points[max_idx+1] - points[max_idx]
-        v2 = points[max_idx+2] - points[max_idx+1]
-        cross_z = np.cross(v1, v2)
-        direction = "right" if cross_z < 0 else "left" if cross_z > 0 else "straight"
+        # Find point of maximum curvature and its distance
+        max_curvature_idx = max(range(len(curvatures)), key=lambda i: abs(curvatures[i]))
+        max_curvature = curvatures[max_curvature_idx]
+        max_curvature_distance = curvature_distances[max_curvature_idx]
         
-        return weighted_curvature, direction
+        # Calculate weighted average curvature around the maximum
+        window_start = max(0, max_curvature_idx - 2)
+        window_end = min(len(curvatures), max_curvature_idx + 3)
+        
+        curve_segment = curvatures[window_start:window_end]
+        weighted_curvature = sum(curve_segment) / len(curve_segment)
+        
+        # Determine turn direction from maximum curvature point
+        # Use nearby points for more stable direction calculation
+        direction_idx = max_curvature_idx
+        if direction_idx < len(points) - 2:
+            v1 = points[direction_idx+1] - points[direction_idx]
+            v2 = points[direction_idx+2] - points[direction_idx+1]
+            cross_z = np.cross(v1, v2)
+            direction = "right" if cross_z < 0 else "left" if cross_z > 0 else "straight"
+        else:
+            direction = "straight"
+        
+        return weighted_curvature, direction, max_curvature_distance
 
+    def find_upcoming_turns(self):
+        """
+        Scan ahead on the trajectory to find upcoming turns and their distances.
+        Updates self.upcoming_turn with the nearest significant turn.
+        """
+        # Scan with the longer planning horizon
+        curvature, direction, distance = self.detect_curvature(self.planning_horizon)
+        
+        # If significant curvature detected and within threshold distance
+        if abs(curvature) > self.curvature_threshold and distance < self.turn_distance_threshold:
+            # Store information about the upcoming turn
+            self.upcoming_turn = (distance, curvature, direction)
+            self.turn_detected = True
+            # Log only when we detect a turn or periodically
+            if self.pointer % self.curvature_log_interval == 0:
+                rospy.logwarn(f"UPCOMING TURN DETECTED: {direction.upper()} turn in {distance:.1f}m with curvature {curvature:.6f}")
+            return True
+        else:
+            self.upcoming_turn = None
+            self.turn_detected = False
+            return False
+            
     def waypoint_selection(self):
         s_front, s_left, s_right, s_front_left, s_front_right = self.laserscan_subscriber.return_s_min_laser()
         
@@ -135,8 +193,11 @@ class WaypointSelection(object):
         waypoint_data = self.waypoints
         car_data = self.odom_data_processor.get_car_info()
 
+        # Look for upcoming turns for speed planning
+        self.find_upcoming_turns()
+
         # Always detect and log road curvature every cycle for debugging
-        curvature, direction = self.detect_curvature()
+        curvature, direction, _ = self.detect_curvature()
         if abs(curvature) > self.curvature_threshold:
             rospy.logwarn(f"CURVE DETECTED: {direction.upper()} turn with curvature {curvature:.6f} at waypoint {self.pointer}")
         elif self.pointer % self.curvature_log_interval == 0:
@@ -157,7 +218,7 @@ class WaypointSelection(object):
                 # rospy.logwarn(f"Current waypoint: {self.x0_y0}, Next waypoint: {self.x1_y1}")
 
         try:
-            m1 = (self.x1_y1[1] - self.x0_y0[1])/(self.x1_y1[0] - self.x0_y0[0])
+            m1 = (self.x1_y1[1] - self.x0_y0[1])/(self.x1_y0[0] - self.x0_y0[0])
             m2 = -1/m1
 
             c_1 = self.x1_y1[1] - m2*self.x1_y1[0]
@@ -238,3 +299,10 @@ class WaypointSelection(object):
         if future_idx < len(waypoint_data):
             return (waypoint_data[future_idx][0], waypoint_data[future_idx][1])
         return None
+
+    def get_upcoming_turn_info(self):
+        """
+        Returns information about the nearest upcoming turn.
+        Returns: (distance, curvature, direction) or None if no turn detected
+        """
+        return self.upcoming_turn
