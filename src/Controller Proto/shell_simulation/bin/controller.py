@@ -23,7 +23,7 @@ class Controller_Carla(object):
         self.d_aman = 6.5 
         # Desired velocity - convert from km/h to m/s
         KMH_TO_MS = 1/3.6  # Conversion factor from km/h to m/s
-        self.v_desired = 17.625 * KMH_TO_MS  # 17.625 km/h ≈ 4.9 m/s
+        self.v_desired = 25 * KMH_TO_MS  # 17.625 km/h ≈ 4.9 m/s
         self.init_time = None
         self.distance = 0.0
         self.last_pose = None
@@ -116,81 +116,53 @@ class Controller_Carla(object):
         
         Args:
             xc, yc: Current vehicle position
-            path_points: List of path points [(x0,y0), (x1,y1), ...]
-            ld: Look-ahead distance
+            path_points: List of path points within 1m visibility [(x0,y0), (x1,y1), ...]
+            ld: Look-ahead distance (adjusted for limited visibility)
             
         Returns:
             target_point: (x,y) coordinates of target point
         """
-        # Initialize with the furthest path point as default target
+        # Initialize with the furthest visible path point as default target
         target_point = path_points[-1]
-        min_dist_diff = float('inf')
         
-        # Convert current position to numpy array
+        # Current position as numpy array
         current_pos = np.array([xc, yc])
         
-        # Iterate through path segments to find intersection with look-ahead circle
-        for i in range(len(path_points) - 1):
-            # Get segment points
-            p1 = np.array(path_points[i])
-            p2 = np.array(path_points[i+1])
-            
-            # Vector from p1 to p2
-            v = p2 - p1
-            # Vector from p1 to current position
-            w = current_pos - p1
-            
-            # Calculate segment length
-            seg_len = np.linalg.norm(v)
-            if seg_len < 0.001:  # Skip very small segments
-                continue
-                
-            # Normalize v
-            v_norm = v / seg_len
-            
-            # Projection of w onto v
-            proj = np.dot(w, v_norm)
-            
-            # Closest point on segment to current position
-            closest = p1 + max(0, min(seg_len, proj)) * v_norm
-            
-            # Distance from current position to closest point
-            closest_dist = np.linalg.norm(current_pos - closest)
-            
-            # If we're further than ld from the path, skip to next segment
-            if closest_dist > 1.5 * ld:
-                continue
-                
-            # Solve for intersection(s) of segment with circle of radius ld
-            # Based on quadratic formula for line-circle intersection
-            a = np.dot(v, v)
-            b = 2 * np.dot(w, v)
-            c = np.dot(w, w) - ld * ld
-            
-            discriminant = b * b - 4 * a * c
-            
-            if discriminant < 0:  # No intersection
-                continue
-                
-            # Find the two possible intersections
-            t1 = (-b + np.sqrt(discriminant)) / (2 * a)
-            t2 = (-b - np.sqrt(discriminant)) / (2 * a)
-            
-            # We want the intersection that's further along the path
-            t = max(t1, t2)
-            
-            # If intersection is on this segment and is ahead of us
-            if 0 <= t <= 1 and proj < seg_len:
-                intersection = p1 + t * v
-                
-                # Calculate how close this is to our desired look-ahead
-                dist_diff = abs(np.linalg.norm(intersection - current_pos) - ld)
-                
-                # If this is closer to desired look-ahead than previous best
-                if dist_diff < min_dist_diff:
-                    min_dist_diff = dist_diff
-                    target_point = intersection
+        # Calculate distances to all path points
+        distances = []
+        for point in path_points:
+            dist = np.linalg.norm(np.array(point) - current_pos)
+            distances.append(dist)
         
+        # If desired look-ahead distance is beyond what we can see,
+        # use the furthest visible point
+        if ld > distances[-1]:
+            return target_point
+        
+        # Otherwise, find the point closest to our desired look-ahead distance
+        closest_idx = 0
+        min_dist_diff = float('inf')
+        
+        for i, dist in enumerate(distances):
+            dist_diff = abs(dist - ld)
+            if dist_diff < min_dist_diff:
+                min_dist_diff = dist_diff
+                closest_idx = i
+        
+        # If the closest point is not the last point, check if we should interpolate
+        if closest_idx < len(path_points) - 1 and distances[closest_idx] < ld < distances[closest_idx + 1]:
+            # Interpolate between the two closest points
+            p1 = np.array(path_points[closest_idx])
+            p2 = np.array(path_points[closest_idx + 1])
+            
+            # Calculate the interpolation ratio
+            ratio = (ld - distances[closest_idx]) / (distances[closest_idx + 1] - distances[closest_idx])
+            
+            # Interpolate the target point
+            target_point = tuple(p1 + ratio * (p2 - p1))
+        else:
+            target_point = path_points[closest_idx]
+            
         return target_point
 
     def check_car_info(self):
@@ -217,8 +189,6 @@ class Controller_Carla(object):
             finish_gliding = (last_point_distance  <= 13.65)
             finish = (last_point_distance <= 3)
 
-
-            isState2 = self.waypoint_selection.state == 2
 
             v_car = car_data[2]
             yaw_car = car_data[3]
@@ -258,6 +228,12 @@ class Controller_Carla(object):
 
             # Get additional waypoints for better path representation
             path_points = self.waypoint_selection.get_path_points()
+            
+            # Get road curvature for current position (for debugging)
+            curvature, direction = self.waypoint_selection.detect_curvature()
+            if abs(curvature) > self.waypoint_selection.curvature_threshold:
+                rospy.logwarn(f"UPCOMING TURN: {direction.upper()} with curvature {curvature:.4f}")
+            
             if not path_points or len(path_points) < 2:
                 # Default to using the two waypoints we have
                 path_points = [(x0, y0), (x1, y1)]
@@ -321,9 +297,11 @@ class Controller_Carla(object):
             ######################### Longitudinal ############################
             isWarning = front_d < 8.0
 
-            if (isState2 and v_car <= self.v_desired):
+            # Check if obstacle is too close - was previously using isState2
+            # Replacing the removed state attribute with direct obstacle check
+            if (isWarning and v_car <= self.v_desired):
                 isMaintain = True
-            elif (isState2 and v_car > self.v_desired):
+            elif (isWarning and v_car > self.v_desired):
                 isMaintain = False
 
             # Case 1: Maintain distance to front vehicle
