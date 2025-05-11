@@ -12,6 +12,9 @@ if IS_SUBMISSION:
     from std_msgs.msg import Float64, String #SUBMIT CARLA
 else:
     from carla_msgs.msg import CarlaEgoVehicleControl #RUNING CARLA
+    
+# Add correct collision message type
+from carla_msgs.msg import CarlaCollisionEvent
 
 class Controller_Carla(object):
 
@@ -23,7 +26,7 @@ class Controller_Carla(object):
         self.d_aman = 6.5 
         # Desired velocity - convert from km/h to m/s
         KMH_TO_MS = 1/3.6  # Conversion factor from km/h to m/s
-        self.v_desired = 25 * KMH_TO_MS  # 17.625 km/h ≈ 4.9 m/s
+        self.v_desired = 35 * KMH_TO_MS  # 17.625 km/h ≈ 4.9 m/s
         self.init_time = None
         self.distance = 0.0
         self.last_pose = None
@@ -39,13 +42,19 @@ class Controller_Carla(object):
         self.max_look_ahead = 3.0  # Maximum look-ahead distance
         self.ld_gain = 0.3  # Look-ahead distance gain based on velocity
         self.prev_steering = 0.0  # For steering filtering
-        self.steering_filter = 0.4  # Steering filter coefficient
+        self.steering_filter = 0.7  # Steering filter coefficient
 
         # Parameters for turn-based cruise control
         self.enable_turn_cruise = True  # Enable/disable feature
         self.cruise_start_distance = 15.0  # Start slowing down this many meters before a turn
-        self.min_turn_speed = 3.0  # m/s - minimum speed for turns
-        self.speed_reduction_factor = 0.6  # How much to reduce speed for sharper turns
+        self.min_turn_speed = 2.0  # m/s - minimum speed for turns
+        self.speed_reduction_factor = 0.8  # How much to reduce speed for sharper turns
+
+        # Collision detection - fixed to use correct message type
+        self.collision_count = 0
+        self.collision_subscriber = rospy.Subscriber("/carla/ego_vehicle/collision", CarlaCollisionEvent, self.collision_callback)
+        self.last_collision_time = 0.0
+        self.collision_cooldown = 1.0  # Minimum time between counting collisions (seconds)
 
         #Publisher
         if IS_SUBMISSION:
@@ -207,6 +216,19 @@ class Controller_Carla(object):
             
         return target_speed
 
+    def collision_callback(self, msg):
+        """Callback for collision detection"""
+        current_time = rospy.get_time()
+        
+        # Only count collisions that happen after a cooldown period
+        if current_time - self.last_collision_time > self.collision_cooldown:
+            self.collision_count += 1
+            collision_intensity = np.linalg.norm([msg.normal_impulse.x, msg.normal_impulse.y, msg.normal_impulse.z])
+            collider_id = msg.other_actor_id
+            
+            rospy.logwarn(f"COLLISION DETECTED! Total: {self.collision_count}, Intensity: {collision_intensity:.2f}, Actor ID: {collider_id}")
+            self.last_collision_time = current_time
+
     def check_car_info(self):
         r = rospy.Rate(60)
 
@@ -226,11 +248,18 @@ class Controller_Carla(object):
             x0_y0, x1_y1, front_d = self.waypoint_selection.waypoint_goal()
 
             #Finish Gliding
-            last_point = [-232.60,28.10]
+            last_point = [396, -322]
             last_point_distance = np.linalg.norm(np.array(car_data[0:2]) - np.array(last_point))
             finish_gliding = (last_point_distance  <= 13.65)
             finish = (last_point_distance <= 3)
 
+            # If car has just reached the finish point, display collision stats
+            if finish and last_point_distance > 2.9:  # Just crossed the finish threshold
+                rospy.logwarn(f"==== JOURNEY COMPLETE ====")
+                rospy.logwarn(f"Total collisions: {self.collision_count}")
+                rospy.logwarn(f"Total distance: {self.distance:.2f}m")
+                rospy.logwarn(f"Total time: {t_now-self.init_time:.2f}s")
+                rospy.logwarn(f"==========================")
 
             v_car = car_data[2]
             yaw_car = car_data[3]
@@ -376,7 +405,7 @@ class Controller_Carla(object):
             # Case 2: Warning - vehicle too close
             elif isWarning:
                 # Determine target speed based on front distance
-                if front_d < 6.0:
+                if front_d < 4.0:
                     print("Stop, car ahead")
                     v_desired = 0.0
                 else:
@@ -403,11 +432,11 @@ class Controller_Carla(object):
                 delta_v = turn_target_speed - v_car
                 
                 # Log cruising status with current and target speeds
-                if turn_target_speed < self.v_desired:
-                    cruising_pct = (turn_target_speed / self.v_desired) * 100
-                    rospy.logwarn(f"CRUISING: Current speed={v_car:.2f} m/s, Target={turn_target_speed:.2f} m/s ({cruising_pct:.0f}% of max)")
-                elif abs(v_car - self.v_desired) < 0.5:
-                    rospy.logwarn(f"NORMAL SPEED: Maintaining {v_car:.2f} m/s")
+                # if turn_target_speed < self.v_desired:
+                #     cruising_pct = (turn_target_speed / self.v_desired) * 100
+                #     rospy.logwarn(f"CRUISING: Current speed={v_car:.2f} m/s, Target={turn_target_speed:.2f} m/s ({cruising_pct:.0f}% of max)")
+                # elif abs(v_car - self.v_desired) < 0.5:
+                #     rospy.logwarn(f"NORMAL SPEED: Maintaining {v_car:.2f} m/s")
                 
                 # Apply PID control for target speed
                 control_signal, int_val_v = self.calculate_pid(
@@ -427,14 +456,15 @@ class Controller_Carla(object):
 
             self.publish_controller(throttle_output, steer_output, brake_output)
 
-            if not finish :
+            if not finish:
                 # Display: Time elapsed, Distance to last point, Current velocity, Total distance traveled
                 rospy.logwarn(f'Time: {t_now-self.init_time:.1f}s | '
                              f'Distance to goal: {last_point_distance:.1f}m | '
                              f'Speed: {car_data[2]:.2f}m/s | '
-                             f'Total traveled: {self.distance:.1f}m')
-            else :
-                rospy.logwarn(f'LD: {last_point_distance:.1f}, V: {car_data[2]:.2f}')
+                             f'Total traveled: {self.distance:.1f}m | '
+                             f'Collisions: {self.collision_count}')
+            else:
+                rospy.logwarn(f'LD: {last_point_distance:.1f}, V: {car_data[2]:.2f}, Collisions: {self.collision_count}')
             
         r.sleep()
 

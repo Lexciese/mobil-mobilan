@@ -271,7 +271,7 @@ class WaypointSelection(object):
                     
                     # Cruising info - how much we should reduce speed based on curvature
                     speed_factor = min(1.0, abs(curvature) / 0.1) * 100  # Percentage of speed reduction
-                    rospy.logwarn(f"CRUISE PLANNING: {direction.upper()} turn in {curve_distance:.1f}m requires {speed_factor:.0f}% speed reduction")
+                    # rospy.logwarn(f"CRUISE PLANNING: {direction.upper()} turn in {curve_distance:.1f}m requires {speed_factor:.0f}% speed reduction")
                     
                     rospy.logwarn(f"EARLY TURN DETECTION: {direction.upper()} turn detected {curve_distance:.1f}m ahead with curvature {curvature:.4f}")
                     return True
