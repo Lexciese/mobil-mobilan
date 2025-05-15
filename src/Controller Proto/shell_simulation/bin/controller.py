@@ -37,9 +37,9 @@ class Controller_Carla(object):
         self.kd = 0.778
 
         # Pure Pursuit Parameters
-        self.k_gain = 1.3  # Controller gain, default 0.7
-        self.min_look_ahead = 0.2  # Minimum look-ahead distance
-        self.max_look_ahead = 4.0  # Maximum look-ahead distance
+        self.k_gain = 2 # Controller gain, default 0.7
+        self.min_look_ahead = 2.0  # Minimum look-ahead distance
+        self.max_look_ahead = 7.0  # Maximum look-ahead distance
         self.ld_gain = 0.3  # Look-ahead distance gain based on velocity
         self.prev_steering = 0.0  # For steering filtering
         self.steering_filter = 0.7  # Steering filter coefficient
@@ -230,7 +230,7 @@ class Controller_Carla(object):
             self.last_collision_time = current_time
 
     def check_car_info(self):
-        r = rospy.Rate(60)
+        r = rospy.Rate(120)
 
         #Initial value
         t_previous = rospy.get_time()
